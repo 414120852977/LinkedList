@@ -14,4 +14,18 @@ public class LinkedListTest {
         linkedList.insertFirst(56);
           linkedList.viewlist();
     }
+
+    /**
+     * appending 30 and 70 to 56
+     * first 56 will be created then next appent 30 to 56 and finally append 70 to 30
+     */
+    @Test
+    public void insertAtLast() {
+        LinkedList linkedList = new LinkedList();
+        linkedList.insertLast(56);
+        linkedList.insertLast(30);
+        linkedList.insertLast(70);
+        linkedList.insertLast(70);
+        linkedList.viewlist();
+    }
 }

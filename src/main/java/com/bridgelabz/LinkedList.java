@@ -63,4 +63,22 @@ public class LinkedList<K> {
         start = n;
         size++;
     }
-}
+
+    public  void insertLast(int val) {
+            Node n,t;
+            n = new Node();
+            n.setData(val);
+            t = start;
+            if(t == null) {
+                start = n;
+            }
+            else {
+                while(t.getNext() != null)
+                    t  = t.getNext();
+                    t.setNext(n);
+                    size++;
+                }
+            }
+        }
+
+
