@@ -28,4 +28,15 @@ public class LinkedListTest {
         linkedList.insertLast(70);
         linkedList.viewlist();
     }
+    /**
+     * inset At position method work to place the element in exact position
+     */
+    @Test
+    public void insertAtExactPosition() {
+        LinkedList linkedList = new LinkedList();
+        linkedList.insertFirst(70);
+        linkedList.insertAtPosition(30,1);
+        linkedList.insertFirst(56);
+        linkedList.viewlist();
+    }
 }

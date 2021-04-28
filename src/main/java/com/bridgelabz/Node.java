@@ -5,8 +5,8 @@ public class Node {
     Node next;
 
     public Node() {
-        this.data = data;
-        this.next = next;
+        this.data = 0;
+        this.next = null;
     }
 
     public int getData() {
