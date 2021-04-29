@@ -39,4 +39,17 @@ public class LinkedListTest {
         linkedList.insertFirst(56);
         linkedList.viewlist();
     }
+
+    /**
+     * method is to delete first position of a linked list
+     */
+    @Test
+    public void deleteFirstPosition() {
+        LinkedList linkedList = new LinkedList();
+        linkedList.insertFirst(70);
+        linkedList.insertFirst(30);
+        linkedList.insertFirst(56);
+        linkedList.deletefirst();
+        linkedList.viewlist();
+    }
 }

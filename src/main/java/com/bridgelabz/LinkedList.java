@@ -97,6 +97,16 @@ public class LinkedList<K> {
             }
         }
     }
+
+    public void deletefirst() {
+        if(start == null) {
+            System.out.println("list is empty");
+        }
+        else {
+            start =start.getNext();
+            size--;
+        }
+    }
 }
 
 
