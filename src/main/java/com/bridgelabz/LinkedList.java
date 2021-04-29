@@ -40,7 +40,7 @@ public class LinkedList<T extends  Node> {
             System.out.println("list is empty");
         } else {
             t = start;
-            for (int i = 0; i < size; i++) {
+            for (int i = 1; i < size; i++) {
                 System.out.print(t.getData() + "  ->  ");
                 t = t.getNext();
             }
@@ -139,6 +139,26 @@ public class LinkedList<T extends  Node> {
                 i++;
                 t = t.getNext();
             }
+        }
+        public  void searchAndThenPlace(int val,int Key) {
+        Node n,t;
+        t = start;
+        int i = 0;
+        if(start == null ) {
+            System.out.println("list is empty");
+        }
+       else {
+           while(t.getNext() != null) {
+               if(t.getData() == Key) {
+                   System.out.println("data with "+Key+"found");
+                   n = new Node();
+                   n.setData(val);
+                   t.setNext(n);
+               }
+               i++;
+               t = t.getNext();
+           }
+        }
         }
     }
 

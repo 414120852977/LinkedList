@@ -83,4 +83,20 @@ public class LinkedListTest {
         linkedList.viewlist();
         Assert.assertEquals(3,linkedList.getSize());
     }
+    /**
+     * insert after 30 to 40 to the linked list as sequence is 56 -> 30 ->40 ->70-null
+     * first serch with node 30 and then after search put new node 40
+     */
+
+    @Test
+    public void searchNodeAndPlaceValue() {
+        LinkedList linkedList = new LinkedList();
+        linkedList.insertFirst(70);
+        linkedList.insertFirst(70);
+        linkedList.insertFirst(30);
+        linkedList.searchAndThenPlace(40,30);
+        linkedList.insertFirst(56);
+        linkedList.viewlist();
+        Assert.assertEquals(4,linkedList.getSize());
+    }
 }
