@@ -1,16 +1,10 @@
 package com.bridgelabz;
 
-public class LinkedList<K> {
+public class LinkedList<T extends  Node> {
     int size;
-    Node start;
+    Node  start;
 
-    public static void main(String[] args) {
-        System.out.println("Welcome to Linked List Operations");
-    }
-    // ability to create linked list 56,30 and 70
-
-
-    public LinkedList() {
+    public <T> LinkedList() {
         this.size = 0;
         this.start = null;
     }
@@ -89,7 +83,7 @@ public class LinkedList<K> {
             n.setData(val);
             n.setNext(null);
             t=start;
-            for(int i=1;i<pos;i++) {
+            for(int i=1;i<=pos;i++) {
                 t = t.getNext();
                 n.setNext(t.getNext());
                 t.setNext(n);
@@ -124,7 +118,30 @@ public class LinkedList<K> {
             size--;
         }
     }
-}
+
+    public void searchNode(int val) {
+        Node n,t;
+        t = start;
+        int i = 0;
+        if(start == null) {
+            System.out.println("list is empty");
+        }
+        if(val == size-1) {
+            System.out.println("found"+val);
+        }
+        else
+            while(t.getNext() != null) {
+                if(t.getData() == val) {
+                    System.out.println("value found");
+                    System.out.println("data -> "+val+"at"+i);
+                    break;
+                }
+                i++;
+                t = t.getNext();
+            }
+        }
+    }
+
 
 
 
