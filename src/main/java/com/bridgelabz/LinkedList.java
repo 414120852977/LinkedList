@@ -107,6 +107,23 @@ public class LinkedList<K> {
             size--;
         }
     }
+
+    public void deleteLast(){
+        if (start == null){
+            System.out.println("empty");
+        }
+        else if(size == 1){
+            start=null;
+            size--;
+        }else{
+            Node t;
+            t=start;
+            for(int i=1;i<size-1;i++)
+                t=t.getNext();
+            t.setNext(null);
+            size--;
+        }
+    }
 }
 
 
