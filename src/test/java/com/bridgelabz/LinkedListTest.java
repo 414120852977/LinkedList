@@ -52,4 +52,16 @@ public class LinkedListTest {
         linkedList.deletefirst();
         linkedList.viewlist();
     }
+    /**
+     * deleting last element of a linked list
+     */
+    @Test
+    public void deleteLastElementInList() {
+        LinkedList linkedList = new LinkedList();
+        linkedList.insertFirst(70);
+        linkedList.insertFirst(30);
+        linkedList.insertFirst(56);
+        linkedList.deleteLast();
+        linkedList.viewlist();
+    }
 }
