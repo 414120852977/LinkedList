@@ -159,8 +159,29 @@ public class LinkedList<T extends  Node> {
                t = t.getNext();
            }
         }
+    }
+
+    public void  deleteNodeFromList(int val) {
+        Node n,t;
+        t = start;
+        int i = 0;
+        if(start == null) {
+            System.out.println("list is empty");
+        }
+        else {
+            while(t.getNext() != null) {
+                if (t.getData() == val) {
+                size--;
+                    System.out.println("list");
+                    break;
+                }
+            }
+            i++;
+            t = t.getNext();
         }
     }
+
+}
 
 
 

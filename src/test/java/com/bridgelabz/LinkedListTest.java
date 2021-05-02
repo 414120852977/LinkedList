@@ -99,4 +99,25 @@ public class LinkedListTest {
         linkedList.viewlist();
         Assert.assertEquals(4,linkedList.getSize());
     }
+
+    /**
+     * delete a node from linked list at a specific position and show also size of linked list
+     */
+    @Test
+    public void deleteSpecificNodeInLinkedList() {
+        LinkedList linkedList = new LinkedList();
+
+        linkedList.insertFirst(70);
+        linkedList.insertFirst(70);
+        linkedList.insertFirst(30);
+        linkedList.searchAndThenPlace(40,30);
+        linkedList.insertFirst(56);
+        linkedList.deleteNodeFromList(40);
+        linkedList.viewlist();
+        Assert.assertEquals(4,linkedList.getSize());
+    }
+    /**
+     * ability to create linked list in ordered using sorting data will be in unorderd then i am performed operation to keep data
+     * in ascending ordered
+     */
 }

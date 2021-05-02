@@ -6,7 +6,7 @@ public class Node {
 
     public Node() {
         this.data = 0;
-        this.next = null;
+        this.next = next;
     }
 
     public int getData() {
